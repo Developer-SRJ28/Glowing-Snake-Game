@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glowing Snake Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header id="game-header">Glowing Snake 2.0</header>
+  <section id="top-bar">
+    <div id="score">Score: 0 | High Score: 0</div>
+    <div id="controls">
+      <button id="start-btn">Start Game</button>
+      <button id="restart-btn">Restart Game</button>
+      <button id="reset-leaderboard-btn" class="refresh-btn">Refresh</button>
+      <div id="skin-options">
+        <div id="choose-color-prompt" style="color:#fff; font-weight:bold; margin-bottom:8px;">Choose a color:</div>
+       <button class="skin-btn" data-skin="red" style="--skin-color:#ff0000"></button>
+       <button class="skin-btn" data-skin="orange" style="--skin-color:#ff9900"></button>
+       <button class="skin-btn" data-skin="gold" style="--skin-color:#ffd700"></button>
+       <button class="skin-btn" data-skin="lime" style="--skin-color:#bfff00"></button>
+       <button class="skin-btn" data-skin="green" style= "--skin-color:#39ff14"></button>
+       <button class="skin-btn" data-skin="blue" style="--skin-color:#00e1ff"></button>
+       <button class="skin-btn" data-skin="dodgerblue" style="--skin-color:#1e90ff"></button>
+       <button class="skin-btn" data-skin="midnightblue" style="--skin-color:#191970"></button>
+       <button class="skin-btn" data-skin="navy" style="--skin-color:#001f6e"></button>
+       <button class="skin-btn" data-skin="pink" style="--skin-color:#ff5ecb"></button>
+       <button class="skin-btn" data-skin="magenta" style="--skin-color:#ff00c8"></button>
+       <button class="skin-btn" data-skin="purple" style="--skin-color:#b200ff"></button>
+       <button class="skin-btn" data-skin="white" style="--skin-color:#fff"></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="game-wrapper">
+    <div id="countdown"></div>
+    <div id="countdown-overlay">
+      <div id="countdown-text">10</div>
+  </div>
+
+  <main id="game-layout"></main>
+    <div id="game-board"></div>
+    <div id="leaderboard-container"class="neon-box">
+     <h2>🏆Leaderboard</h2>
+     <ul id="leaderboard-list"></ul>
+    </div>
+  </main>
+
+    <div class="touch-controls">
+      <div class="row" style="justify-content: center;">
+        <button id="up-btn"class="touch-btn">UP</button>
+      </div>
+
+      <div class="row" style="justify-content: space-between;">
+       <button id="left-btn" class="touch-btn">LEFT</button>
+       <button id="right-btn"class="touch-btn">RIGHT</button>
+      </div>
+      <div class="row"style="justify-content: center;">
+       <button id="down-btn"class="touch-btn">DOWN</button>
+      </div>
+    </div>
+
+  <div id="game-over" style="display: none;">
+    <h1>Game Over</h1>
+    <p>Click Restart to play again!</p>
+  </div>
+
+ <audio id="eat-sound" src="sounds/eat.mp3" preload="auto"></audio>
+ <audio id="countdown-sound" src="sounds/countdown.mp3" preload="auto"></audio>
+ <audio id="gameOver-sound" src="sounds/lose.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
